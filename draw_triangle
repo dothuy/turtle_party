@@ -1,0 +1,42 @@
+#2nd day JOC: how to draw a triangle
+import turtle;
+turtle.color("red")
+
+#move turtle to right side of the page before drawing, so we have room for all excercises
+turtle.penup()
+turtle.forward(100)
+turtle.pendown()
+
+size = 70
+
+#turtle.forward(size)
+#turtle.right(120)
+#turtle.forward(size)
+#turtle.right(120)
+#turtle.forward(size)
+
+#using for loop instead
+for i in range(3):
+  turtle.forward(size)
+  turtle.right(120)
+  
+
+#make turtle to draw a triangle point up instead of down
+angle = 120 
+turtle.penup()  #no trace of turtle to begin a new shape
+turtle.left(90) #pointing turtle to straight up
+turtle.forward(40) #to stay away from previous down-side triangle, and start a new one pointing up
+turtle.pendown()
+turtle.right(30) #start draw 1st side of triangle, going up
+size +=30     #increase the length of the triangle's side to 100
+
+#turtle.forward(size)  
+#turtle.right(angle)
+#turtle.forward(size)
+#turtle.right(angle)
+#turtle.forward(size)
+
+#using for loop
+for i in range(3):
+  turtle.forward(size)
+  turtle.right(angle)
