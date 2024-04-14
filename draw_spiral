@@ -1,0 +1,29 @@
+#Turtle party
+#Create a spiral function that takes the length of the longest side and the angle of the spiral as parameters and draws a spiral shape where the side length shrinks (or grows) after every turn: 
+import turtle
+turtle.color("red")
+
+def drawSpiral(longestSide, angle, step):
+  #Return error if longestSide is negative number
+  if longestSide<0:
+    print("Error! Can't draw a Spiral with a negative number")
+  else:
+    for i in range (1, longestSide, step):
+      print(i)
+      turtle.forward(i)
+      turtle.left(angle)
+      
+
+#test function with longestSide is a negative number ->Error
+drawSpiral(-30, 40, 1)
+
+#test function with angle is a negative number, direction goes backward ->passed
+drawSpiral(70, -40, 1)
+
+#test function with angle=60deg, increased by 5 ->passed
+turtle.color("blue")
+drawSpiral(90, 60, 5)   
+  
+#test function with angle=600deg, increased by 20 -->Passed
+turtle.color("black")
+drawSpiral(190, 600, 20)
