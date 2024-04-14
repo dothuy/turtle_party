@@ -1,0 +1,30 @@
+#Turtle party
+#Create a polygon function that takes the number of sides and length of each side as parameters & draws the appropriate shape by turning 360 (the number of degrees in a circle) divided by the number of sides. Challenge: print an error message & draw nothing if there are less than 3 sides.  
+  
+import turtle
+turtle.color("red")
+
+def drawPolygon(side, length):
+  if(side >=3):
+    for i in range(side):
+      turtle.forward(length)
+      turtle.left(360/side)
+    print("ok, here is a polygon with",i, 'sides')
+    
+  else:
+    print("Error! Can't draw a Polygon with less than 3 sides")
+    
+
+#drawPolygon, side range from 1 to 20
+for i in range(1,20): 
+  if i%2 == 0:
+    turtle.color("green")
+    
+  elif i%3 == 0:
+    turtle.color("red")
+  
+  elif i%5==0:
+    turtle.color("blue")
+  else:
+    turtle.color("black")
+  drawPolygon(i,40) #test2 passed
