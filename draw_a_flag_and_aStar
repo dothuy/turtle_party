@@ -1,0 +1,28 @@
+#draw a Flag w a Star
+import turtle
+turtle.color("red")
+
+#for i in range (5):
+turtle.left(90)
+
+turtle.right(20)
+
+for i in range (5):
+  turtle.forward(100)
+  turtle.right(180-36)
+
+turtle.penup()
+turtle.right(36)
+turtle.back(50)
+turtle.left(20+36)
+turtle.pendown()
+#turtle.right(90)
+
+for i in range (4):
+  if i%2==0:
+    turtle.forward(150)
+  else:
+    turtle.forward(190)
+    
+  turtle.right(90)
+  
