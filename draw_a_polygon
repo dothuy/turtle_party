@@ -9,7 +9,7 @@ def drawPolygon(side, length):
     for i in range(side):
       turtle.forward(length)
       turtle.left(360/side)
-    print("ok, here is a polygon with",i, 'sides')
+    print("ok, here is a polygon with %s"%i +' sides')
     
   else:
     print("Error! Can't draw a Polygon with less than 3 sides")
