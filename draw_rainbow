@@ -1,0 +1,50 @@
+# created by Thuy Do
+# Guidelines:
+# Learning Activity: Turtle Class
+# We are going to revisit turtle, but this time I challenge you to name two turtles and have them create two different things. Get creative with it! I'm looking forward to seeing your creativity on discord when you share your final result!
+# Use a minimum of two separate turtles
+# Use at least two different colors
+# Use more than five method calls
+# You can use the following turtle class details lesson to find method calls to use
+
+import turtle
+
+def draw_rainbow(turtle, color, width, x,y):
+    turtle.penup()
+    turtle.goto(x,y)
+    turtle.pendown()
+    turtle.shape("turtle")
+    turtle.color(color)
+    turtle.width(width)
+    turtle.speed(2)
+    turtle.left(90)
+    turtle.forward(100)
+    i = 180/5
+    while i>0:
+        turtle.right(5)
+        turtle.forward(10)
+        i -=1
+
+    turtle.forward(95)
+
+def main():
+    turtle_blue = turtle.Turtle()
+    turtle_blue.speed(2)
+
+    turtle_red = turtle.Turtle()
+    turtle_red.speed(3)
+
+    turtle_green = turtle.Turtle()
+    turtle_yellow = turtle.Turtle()
+    turtle_orange = turtle.Turtle()
+
+    draw_rainbow(turtle_blue, "blue", 25, 0, 0)
+    draw_rainbow(turtle_red, "red", 20, 20, 0)
+    draw_rainbow(turtle_green, "green", 20, 40, 0)
+    draw_rainbow(turtle_yellow, "yellow", 20, 60, 0)
+    draw_rainbow(turtle_orange, "orange", 20, 80, 0)
+
+
+
+main()
+
